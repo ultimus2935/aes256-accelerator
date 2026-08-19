@@ -7,10 +7,9 @@ module sBox(
     );
 
     reg [7:0] sbox_lut [0:255];
+    wire [7:0] async_data;
 
-    initial begin
-        $readmemh("sbox_lut.hex", sbox_lut);
-    end
+    initial $readmemh("sbox_lut.mem", sbox_lut);
 
     assign async_data = sbox_lut[data_in];
 
@@ -18,5 +17,4 @@ module sBox(
         if (rst) data_out <= 8'b0;
         else if (enable) data_out <= async_data;
     end
-
 endmodule

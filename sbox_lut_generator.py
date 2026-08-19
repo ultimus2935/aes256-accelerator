@@ -32,7 +32,7 @@ for i in range(256):
     substituted_byte = affine_transform(inverse)
     sbox.append(substituted_byte)
 
-with open("data/sbox_lut.hex", 'w') as f:
+with open("data/sbox_lut.mem", 'w') as f:
     for i in range(0, 256, 16):
         row = sbox[i:i+16]
         hex_strings = [f"{byte:02X}" for byte in row]
