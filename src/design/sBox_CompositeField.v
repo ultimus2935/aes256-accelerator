@@ -127,11 +127,7 @@ module sBox(
     endfunction
 
     always @(posedge clk or posedge rst) begin
-        if (rst) begin
-            data_out <= 8'b0;
-        end
-        else if (enable) begin
-            data_out <= affine_transform(cfdemap_satoh(gf28_inv(cfmap_satoh(data_in))));
-        end
+        if (rst) data_out <= 8'b0;
+        else if (enable) data_out <= affine_transform(cfdemap_satoh(gf28_inv(cfmap_satoh(data_in))));
     end
 endmodule
