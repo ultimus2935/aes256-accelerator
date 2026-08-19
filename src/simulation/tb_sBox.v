@@ -1,6 +1,6 @@
 `timescale 1ns / 1ps
 
-module tb_sBox_CompositeField();
+module tb_sBox();
     reg clk, rst, enable;
     reg [7:0] data_in;
 
