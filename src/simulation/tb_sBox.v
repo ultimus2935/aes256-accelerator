@@ -25,29 +25,26 @@ module tb_sBox_CompositeField();
         data_in = 8'h00;
         #10
 
-        rst = 0; enable = 1;
+        rst = 0; 
+        
+        data_in = 8'hAA; 
+        #5; 
+
+        enable = 1;
+        #5;
+        
+        data_in = 8'hBA; 
+        #10; 
+        
+        data_in = 8'hCE; 
+        #10; 
+
+        data_in = 8'h56; 
+        #10; 
+
+        data_in = 8'h9D; 
         #10;
 
-        // Apply first input
-        data_in = 8'hAA; 
-        #20; // Wait for the next clock edge
-        
-        // Apply second input
-        data_in = 8'hBA; 
-        #20; 
-        
-        // Apply third input
-        data_in = 8'hCE; 
-        #20; 
-    
-        // Apply fourth input
-        data_in = 8'h56; 
-        #20; 
-    
-        // Apply fifth input
-        data_in = 8'h9D; 
-        #20;
-
-        #50 $finish;
+        $finish;
     end
 endmodule
