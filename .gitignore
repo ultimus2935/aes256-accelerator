@@ -1,0 +1,113 @@
+# ==============================================================================
+# Vivado & FPGA Project Files
+# ==============================================================================
+
+# Temporary runtime logs, journals, and trace files (root & subfolders)
+vivado_workspace/.Xil/
+vivado_workspace/*.jou
+vivado_workspace/*.log
+vivado_workspace/*.str
+
+# Vivado internal directories (synthesis runs, simulation, caches)
+vivado_workspace/*.runs/
+vivado_workspace/*.cache/
+vivado_workspace/*.hw/
+vivado_workspace/*.sim/
+vivado_workspace/*.ip_user_files/
+
+# Synthesis checkpoints, netlists, bitstreams, and hardware definitions
+vivado_workspace/*.dcp
+vivado_workspace/*.bit
+vivado_workspace/*.bin
+vivado_workspace/*.xsa
+
+# Waveforms and simulation databases
+vivado_workspace/xsim.dir/
+
+# SDK / Vitis workspace artifacts
+.metadata/
+*.sdk/
+vitis_workspace/
+
+# ==============================================================================
+# Python & Cocotb / Testing
+# ==============================================================================
+
+# Byte-compiled / optimized files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution, packaging, and build directories
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Testing, coverage, and simulation frameworks (Cocotb / Pytest)
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+results.xml
+*.xml
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# ==============================================================================
+# VS Code (Visual Studio Code)
+# ==============================================================================
+
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+.history/
+.ionide/
+
+# ==============================================================================
+# Windows System Files
+# ==============================================================================
+
+# Windows thumbnail and folder metadata
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+desktop.ini
+
+# Recycle Bin & system volume files
+$RECYCLE.BIN/
+System Volume Information/
+
+# Windows shortcut & temporary files
+*.lnk
+*.tmp
+*.bak
+*~
