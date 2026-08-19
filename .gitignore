@@ -2,6 +2,9 @@
 # Vivado & FPGA Project Files
 # ==============================================================================
 
+# Vivado project file
+vivado_workspace/*.xpr
+
 # Temporary runtime logs, journals, and trace files (root & subfolders)
 vivado_workspace/.Xil/
 vivado_workspace/*.jou
