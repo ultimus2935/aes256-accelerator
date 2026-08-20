@@ -2,30 +2,8 @@
 # Vivado & FPGA Project Files
 # ==============================================================================
 
-# Vivado project file
-vivado_workspace/*.xpr
-
-# Temporary runtime logs, journals, and trace files (root & subfolders)
-vivado_workspace/.Xil/
-vivado_workspace/*.jou
-vivado_workspace/*.log
-vivado_workspace/*.str
-
-# Vivado internal directories (synthesis runs, simulation, caches)
-vivado_workspace/*.runs/
-vivado_workspace/*.cache/
-vivado_workspace/*.hw/
-vivado_workspace/*.sim/
-vivado_workspace/*.ip_user_files/
-
-# Synthesis checkpoints, netlists, bitstreams, and hardware definitions
-vivado_workspace/*.dcp
-vivado_workspace/*.bit
-vivado_workspace/*.bin
-vivado_workspace/*.xsa
-
-# Waveforms and simulation databases
-vivado_workspace/xsim.dir/
+# Vivado workspace folder
+vivado_workspace/
 
 # SDK / Vitis workspace artifacts
 .metadata/
