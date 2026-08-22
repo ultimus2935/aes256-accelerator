@@ -33,4 +33,11 @@ module mixColumns(
             column_mixer(data_in[63:32]),
             column_mixer(data_in[31:0])
         };
+
+    genvar i;
+    generate
+        for (i = 0; i < 16; i = i + 1) begin: gen_sbox
+            assign data_out[i*32 +: 32] = sbox(data_in[i*32 +: 32]);
+        end
+    endgenerate
 endmodule
