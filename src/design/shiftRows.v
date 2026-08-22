@@ -1,5 +1,5 @@
 module shift_rows (
-    input  wire [127:0] data_in,
+    input wire [127:0] data_in,
     output wire [127:0] data_out
 );
 
@@ -24,5 +24,4 @@ module shift_rows (
         data_in[79:72],
         data_in[39:32]
     };
-
 endmodule

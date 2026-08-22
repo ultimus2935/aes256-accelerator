@@ -1,9 +1,8 @@
 `timescale 1ns / 1ps
 
 module sBox(
-    input clk, rst, enable,
-    input [7:0] data_in,
-    output reg [7:0] data_out
+    input wire [7:0] data_in,
+    output wire [7:0] data_out
     );
 
     function [7:0] cfmap_satoh(input [7:0] in);
@@ -126,8 +125,5 @@ module sBox(
         end
     endfunction
 
-    always @(posedge clk or posedge rst) begin
-        if (rst) data_out <= 8'b0;
-        else if (enable) data_out <= affine_transform(cfdemap_satoh(gf28_inv(cfmap_satoh(data_in))));
-    end
+    assign data_out = affine_transform(cfdemap_satoh(gf28_inv(cfmap_satoh(data_in))));
 endmodule
