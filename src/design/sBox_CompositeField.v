@@ -1,8 +1,8 @@
 `timescale 1ns / 1ps
 
 module sBox(
-    input wire [7:0] data_in,
-    output wire [7:0] data_out
+    input wire [127:0] data_in,
+    output wire [127:0] data_out
     );
 
     function [7:0] cfmap_satoh(input [7:0] in);
@@ -125,5 +125,14 @@ module sBox(
         end
     endfunction
 
-    assign data_out = affine_transform(cfdemap_satoh(gf28_inv(cfmap_satoh(data_in))));
+    function [7:0] sbox(input [7:0] in);
+        sbox = affine_transform(cfdemap_satoh(gf28_inv(cfmap_satoh(in))));
+    endfunction
+
+    genvar i;
+    generate
+        for (i = 0; i < 16; i = i + 1) begin: gen_sbox
+            assign data_out[i*8 +: 8] = sbox(data_in[i*8 +: 8]);
+        end
+    endgenerate
 endmodule
