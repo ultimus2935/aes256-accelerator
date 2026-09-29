@@ -1,4 +1,4 @@
-module keyExpansion(
+module key_expansion(
     input wire clk, rst,
     input reg [255:0] base_key,
     output reg [127:0] round_key_out [0:14],

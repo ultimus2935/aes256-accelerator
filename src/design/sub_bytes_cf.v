@@ -1,6 +1,6 @@
 `timescale 1ns / 1ps
 
-module subBytesCF(
+module sub_bytes_cf(
     input wire [127:0] data_in,
     output wire [127:0] data_out
     );

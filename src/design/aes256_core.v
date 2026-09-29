@@ -7,7 +7,7 @@ module aes256_core (
     wire [127:0] round_key_out [0:14];
     wire key_ready;
 
-    keyExpansion u_keyExpansion(
+    key_expansion u_key_expansion(
         .clk (clk),
         .rst (rst),
         .base_key (base_key),
@@ -25,7 +25,7 @@ module aes256_core (
     genvar i;
     generate
         for (i = 1; i < 14; i = i + 1) begin : gen_std_rounds
-            standardRound u_stdRound(
+            standard_round u_standard_round(
                 .clk (clk),
                 .rst (rst),
                 .data_in (pipe[i-1]),
@@ -35,7 +35,7 @@ module aes256_core (
         end
     endgenerate
 
-    finalRound u_finalRound(
+    final_round u_final_round(
         .clk (clk),
         .rst (rst),
         .data_in (pipe[13]),
